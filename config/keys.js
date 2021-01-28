@@ -1,5 +1,5 @@
 module.exports = {
-    MongoURI: 'mongodb+srv://sugarba:sugarba@1234@cluster0.kez7f.mongodb.net/sugarba?retryWrites=true&w=majority'
+    MongoURI: 'mongodb+srv://laroyal:laroyal@cluster0.kxzp0.mongodb.net/laroyalcondos?retryWrites=true&w=majority'
 }
 
 // module.exports = {
