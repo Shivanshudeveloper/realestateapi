@@ -13,6 +13,10 @@ const floorplanSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    beds: {
+        type: String,
+        required: false
+    },
     baths: {
         type: String,
         required: false

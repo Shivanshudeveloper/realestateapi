@@ -68,11 +68,12 @@ router.post('/addnewproperty', (req, res) => {
 // @POST Request to Add a New Floor Plan
 // POST 
 router.post('/addnewfloorplan', (req, res) => {
-    const { suite, price, sqft, baths, maintenance, floor, occupancy, propertytax, view, photoDownloadUrl1 } = req.body;
+    const { suite, price, sqft, baths, beds, maintenance, floor, occupancy, propertytax, view, photoDownloadUrl1 } = req.body;
     const newFloorPlan = new FloorPlan_Model({
         suite,
         price,
         sqft,
+        beds,
         baths,
         maintenance,
         floor,
