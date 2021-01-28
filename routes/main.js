@@ -282,4 +282,56 @@ router.get('/getorderdetails/:id', (req, res) => {
         .catch(err => res.status(400).json(`Error: ${err}`))
 });
 
+// Database CRUD Operations
+// @POST Request to GET the user Oder Property Details
+// GET 
+router.get('/getpropertydetailsadmin/:id', (req, res) => {
+    const { id } = req.params;
+    res.setHeader('Content-Type', 'application/json');
+    Property_Model.find({ '_id': id }).sort({date: -1})
+        .then(data => {
+            res.status(200).json(data);
+        })
+        .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
+
+// Database CRUD Operations
+// @DELETE Request to get all the Property
+// DELETE
+router.get('/deleteproperty/:id', (req, res) => {
+    const { id } = req.params;
+    Property_Model.findOneAndDelete({ '_id': id })
+    .then(data => {
+        res.status(200).json(data)
+    })
+    .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
+
+// Database CRUD Operations
+// @POST Request to GET the user Floor Plan
+// GET 
+router.get('/getfloorinfodetailsadmin/:id', (req, res) => {
+    const { id } = req.params;
+    res.setHeader('Content-Type', 'application/json');
+    FloorPlan_Model.find({ '_id': id }).sort({date: -1})
+        .then(data => {
+            res.status(200).json(data);
+        })
+        .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
+// Database CRUD Operations
+// @DELETE Request to get all the Floor Plan
+// DELETE
+router.get('/deletefloorinfo/:id', (req, res) => {
+    const { id } = req.params;
+    FloorPlan_Model.findOneAndDelete({ '_id': id })
+    .then(data => {
+        res.status(200).json(data)
+    })
+    .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
 module.exports = router;
