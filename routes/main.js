@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const stripe = require('stripe')('sk_test_51HzRB6FXQdX7lmvWuuR5Vps43XA0nIsZOPv8JF1NrebMQPu8zRpdzl0wRMMH7Rz6nlh3rHhn1k9jKrzQWaL1tJZD00CK2PwLWk')
+const stripe = require('stripe')('sk_test_51IHaYPEr6dpmT8oAUsh5Gmy9tZY4mV7sYTiOkQEDv9GKqgMEHPEk4XbMyvunaOpcv3Ug6ipJ07rPtXM445Dk1Vgq00iS2Qu2y1')
 const { v4: uuidv4 } = require('uuid');
 // Getting Module
 const Property_Model = require('../models/Property');
