@@ -1,44 +1,36 @@
 const mongoose = require('mongoose');
 
-const usersPaymentSchema = new mongoose.Schema({
-    transactionId: {
+const usersMainStoreSchema = new mongoose.Schema({
+    title: {
         type: String,
         required: false
     },
-    userId: {
+    price: {
+        type: Number,
+        required: false
+    },
+    displayImage: {
         type: String,
         required: false
     },
-    email: {
+    category: {
         type: String,
         required: false
     },
-    fullName: {
+    madein: {
         type: String,
         required: false
     },
-    phoneno: {
+    gender: {
         type: String,
         required: false
     },
-    address: {
+    description: {
         type: String,
         required: false
     },
-    zipcode: {
-        type: String,
-        required: false
-    },
-    amount: {
-        type: String,
-        required: false
-    },
-    note: {
-        type: String,
-        required: false
-    },
-    completed: {
-        type: Boolean,
+    product: {
+        type: Object,
         required: false
     },
     date: {
@@ -46,5 +38,5 @@ const usersPaymentSchema = new mongoose.Schema({
         default: Date.now
     }
 })
-const payments = mongoose.model('payments', usersPaymentSchema)
-module.exports = payments
+const mainStore = mongoose.model('mainstore', usersMainStoreSchema)
+module.exports = mainStore

@@ -1,7 +1,7 @@
 module.exports = {
-    MongoURI: 'mongodb+srv://laroyal:laroyal@cluster0.kxzp0.mongodb.net/laroyalcondos?retryWrites=true&w=majority'
+  MongoURI: 'mongodb+srv://testadmin:1234567890@cluster0.6pvbu.mongodb.net/rokye?retryWrites=true&w=majority'
 }
 
 // module.exports = {
-//     MongoURI: 'mongodb://localhost:27017/realestate'
+//   MongoURI: 'mongodb://localhost:27017/search'
 // }
